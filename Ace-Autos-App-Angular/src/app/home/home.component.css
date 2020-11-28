@@ -8,7 +8,7 @@ body {
 
 /* Style the header */
 header {
-  background-color: #666;
+  background-color: black;
   padding: 30px;
   text-align: center;
   font-size: 35px;
@@ -26,15 +26,25 @@ nav {
 
 /* Style the list inside the menu */
 nav ul {
+  color: black;
   list-style-type: none;
-  padding: 0;
+}
+
+nav ul li {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
 }
 
 article {
   float: left;
   padding: 20px;
   width: 70%;
-  background-color: #f1f1f1;
+  background-color: white;
   height: 300px; /* only for demonstration, should be removed */
 }
 
@@ -47,11 +57,13 @@ section:after {
 
 /* Style the footer */
 footer {
-  background-color: #777;
+  background-color: black;
   padding: 10px;
   text-align: center;
   color: white;
 }
+
+
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
