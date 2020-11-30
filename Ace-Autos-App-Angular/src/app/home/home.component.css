@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -8,12 +9,20 @@ body {
 
 /* Style the header */
 header {
-  background-color: black;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
+  background-image: url('2018 dodge challenger.jpg');
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: cover;
+  background-size: 500px;
+  background-position: center;
+  padding: 20px;
+  margin-top: 0px;
+  text-align: left;
+  font-size: 28px;
+  color: black;
+  font-family: 'Fugaz One', cursive;
 }
+
 
 /* Create two columns/boxes that floats next to each other */
 nav {
@@ -22,22 +31,30 @@ nav {
   height: 300px; /* only for demonstration, should be removed */
   background: #ccc;
   padding: 20px;
+  font-family: 'Fugaz One', cursive;
 }
 
 /* Style the list inside the menu */
 nav ul {
   color: black;
   list-style-type: none;
+  font-family: 'Fugaz One', cursive;
 }
 
 nav ul li {
   font-size: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  font-family: 'Fugaz One', cursive;
 }
 
 nav ul li a {
   color: black;
   text-decoration: none;
+  font-family: 'Fugaz One';
+}
+
+nav ul li a:hover {
+  background-color: white;
 }
 
 article {
@@ -46,6 +63,11 @@ article {
   width: 70%;
   background-color: white;
   height: 300px; /* only for demonstration, should be removed */
+}
+
+.head{
+  font-size: 30px;
+  font-family: 'Fugaz One', cursive;
 }
 
 /* Clear floats after the columns */
@@ -61,8 +83,19 @@ footer {
   padding: 10px;
   text-align: center;
   color: white;
+  font-family: 'Fugaz One', cursive;
 }
 
+#button {
+  background: white;
+  color: black;
+  height: 50px;
+  font-size: 1.4em;
+  padding: 0 1em;
+  cursor: pointer;
+  font-family: 'Fugaz One', cursive;
+  font-weight: 900;
+}
 
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */

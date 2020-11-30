@@ -3,14 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="b3f2bd3e-0736-4b31-8683-533ceefd328b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/ace autos.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/ace-autos.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/home/home.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/home/home.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/home/home.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/home/home.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/home/ace autos.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/home/ace-autos.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/home/home.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/home/home.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/home/home.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +52,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606389577954</updated>
-      <workItem from="1606389579031" duration="15720000" />
+      <workItem from="1606389579031" duration="25941000" />
+      <workItem from="1606737171739" duration="6818000" />
     </task>
     <servers />
   </component>
