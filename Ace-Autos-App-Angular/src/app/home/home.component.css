@@ -9,7 +9,7 @@ body {
 
 /* Style the header */
 header {
-  background-image: url('2018 dodge challenger.jpg');
+  background-image: url('src/assets/2018 dodge challenger.jpg');
   background-repeat: no-repeat;
   background-color: white;
   background-size: cover;
