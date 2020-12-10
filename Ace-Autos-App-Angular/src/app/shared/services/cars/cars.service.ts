@@ -1,0 +1,34 @@
+import { Injectable } from '@angular/core';
+import {Car} from "../../models/car";
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CarsService {
+
+  cars: Car[];
+  id = 1;
+  constructor() { this.cars = [{id: this.id++, color: 'Red', fuel: 'Diesel', manufacturer: 'Ferrari', mileage: 25,
+    model: 'F8 Spider', price: 3000000, type: 'sport', year: 1994},
+    {id: this.id++, color: 'Yellow', fuel: 'Diesel', manufacturer: 'Lamborghini', mileage: 25,
+      model: 'Urus', price: 2500000, type: 'sport', year: 2019}
+  ]; }
+  getCars(): Car[] {
+      return this.cars;
+  }
+
+  addCars(car) {
+      car.id = this.id++;
+      this.cars.push(car);
+  }
+
+  readCarById(id: number) {
+      return this.cars.find(ca => ca.id === id);
+  }
+
+  delete(car) {
+
+  }
+
+
+}

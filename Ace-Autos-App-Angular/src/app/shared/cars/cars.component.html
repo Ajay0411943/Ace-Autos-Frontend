@@ -1,0 +1,10 @@
+<div class="head" style="text-align: left">
+<h1>List of all the Cars</h1>
+<ul>
+  <li *ngFor="let car of cars">
+    <a routerLink="/cars/{{car.id}}">{{car.manufacturer}}, {{car.color}}</a>
+    <button routerLink="/car-update/{{car.id}}">Update</button>
+  </li>
+</ul>
+</div>
+<button routerLink="/add-car">Add Car</button>

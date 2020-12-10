@@ -48,7 +48,7 @@ h2 {
   position: absolute;
   top: 135px;
   left: 16px;
-  font-size: 18px;
+  font-size: 30px;
 }
 /* Style the list inside the menu */
 nav ul {
@@ -106,6 +106,7 @@ section:after {
 
 /* Style the footer */
 footer {
+  margin-top: 15%;
   background-color: black;
   padding: 10px;
   text-align: center;

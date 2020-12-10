@@ -45,6 +45,7 @@ nav ul li {
   font-size: 20px;
   padding-bottom: 10px;
   font-family: 'Fugaz One', cursive;
+
 }
 
 nav ul li a {
@@ -66,6 +67,7 @@ article {
 }
 
 .head{
+  text-align: left;
   font-size: 30px;
   font-family: 'Fugaz One', cursive;
 }
@@ -75,6 +77,9 @@ section:after {
   content: "";
   display: table;
   clear: both;
+}
+p{
+  text-align: left;
 }
 
 /* Style the footer */
@@ -96,6 +101,32 @@ footer {
   font-family: 'Fugaz One', cursive;
   font-weight: 900;
 }
+form {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  padding-top: 10px;
+  text-align: center;
+  margin-left: 445px;
+}
+
+.heading {
+  margin-left: 445px;
+  margin-top: 5%;
+  text-align: center;
+}
+
+
+button {
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 10px;
+  background: white;
+  color: black;
+  height: 40px;
+  font-size: 1.4em;
+  padding: 0 1em;
+  cursor: pointer;
+}
+
 
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */

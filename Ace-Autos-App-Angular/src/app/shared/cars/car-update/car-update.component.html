@@ -1,0 +1,48 @@
+
+<form [formGroup]="carForm" (ngSubmit)="save()">
+  <label>
+    Manufacturer:
+    <input type="text" formControlName="manufacturer">
+  </label>
+
+  <label>
+    Year:
+    <input type="text" formControlName="year">
+  </label>
+
+  <label>
+    Mileage:
+    <input type="text" formControlName="mileage">
+  </label>
+
+  <label>
+    Fuel:
+    <input type="text" formControlName="fuel">
+  </label>
+
+  <label>
+    Color:
+    <input type="text" formControlName="color">
+  </label>
+
+  <label>
+    Model:
+    <input type="text" formControlName="model">
+  </label>
+
+  <label>
+    Price:
+    <input type="text" formControlName="price">
+  </label>
+
+  <label>
+    Type:
+    <input type="text" formControlName="type">
+  </label>
+
+  <button type="submit">Save</button>
+
+</form>
+
+<button routerLink="/cars">Back</button>
+

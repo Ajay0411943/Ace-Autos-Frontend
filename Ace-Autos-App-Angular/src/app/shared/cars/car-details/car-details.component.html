@@ -1,0 +1,10 @@
+<h1>Car Details</h1>
+<div *ngIf="car">
+  <h2>{{ car.id }}</h2>
+  <h3>{{ car.manufacturer}} {{ car.price}}</h3>
+</div>
+<div *ngIf="!car">
+      <h2>Car not found</h2>
+</div>
+<button routerLink="/cars">Back</button>
+
