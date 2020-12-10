@@ -7,12 +7,13 @@ import { CarsComponent } from './shared/cars/cars.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CarDetailsComponent } from './shared/cars/car-details/car-details.component';
-import { AddCarComponent } from './shared/cars/add-car/add-car.component';
-import {ReactiveFormsModule} from "@angular/forms";
-import { CarUpdateComponent } from './shared/cars/car-update/car-update.component';
-import { FormsModule } from '@angular/forms';
 
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {ReactiveFormsModule} from '@angular/forms';
+import {JwtInterceptor} from './shared/guards/interceptor';
+import {CarUpdateComponent} from './shared/cars/car-update/car-update.component';
+import {CarDetailsComponent} from './shared/cars/car-details/car-details.component';
+import {AddCarComponent} from './shared/cars/add-car/add-car.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +29,10 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
