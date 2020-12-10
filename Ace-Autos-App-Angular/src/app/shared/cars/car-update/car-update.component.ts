@@ -10,8 +10,9 @@ import {valueReferenceToExpression} from "@angular/compiler-cli/src/ngtsc/annota
   styleUrls: ['./car-update.component.css']
 })
 export class CarUpdateComponent implements OnInit {
+  id: number;
 
-  carForm = new FormGroup({
+    carForm = new FormGroup({
     manufacturer: new FormControl(''),
     year: new FormControl(''),
     mileage: new FormControl(''),
@@ -26,8 +27,8 @@ export class CarUpdateComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id');
-    const car = this.carService.readCarById(id);
+    this.id = +this.route.snapshot.paramMap.get('id');
+    const car = this.carService.readCarById(this.id);
     this.carForm.patchValue(  {
       manufacturer: car.manufacturer,
       year: car.year,
@@ -42,8 +43,10 @@ export class CarUpdateComponent implements OnInit {
 
 
   save(){
-    // const car = this.carForm.value;
-    // this.carService.addCars(car);
+    const car = this.carForm.value;
+    car.id = this.id;
+    this.carService.updateCar(car);
+
     // this.carForm.reset();
     // this.router.navigateByUrl("/cars");
   }

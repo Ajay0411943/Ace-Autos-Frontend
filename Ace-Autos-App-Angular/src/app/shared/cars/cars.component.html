@@ -4,6 +4,7 @@
   <li *ngFor="let car of cars">
     <a routerLink="/cars/{{car.id}}">{{car.manufacturer}}, {{car.color}}</a>
     <button routerLink="/car-update/{{car.id}}">Update</button>
+    <button (click)="delete(car.id)">Delete</button>
   </li>
 </ul>
 </div>
