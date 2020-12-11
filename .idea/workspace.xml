@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3f2bd3e-0736-4b31-8683-533ceefd328b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/guards/auth.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/services/authentication.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/services/authentication.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/models/car.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/models/car.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/models/customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/models/customer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/models/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/home/home.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,21 +32,13 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../jwt authentication final/ProductsProject-Frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\Test\Documents\Github\3rd semester final exams backend\Ace-Autos-Frontend\Ace-Autos-App-Angular\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\GitHub\Project Exam\Ace-Autos-App-Angular\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Test\Documents\Github\3rd semester final exams backend\Ace-Autos-Frontend\Ace-Autos-App-Angular\src\app" />
-      <recent name="C:\Users\Test\Documents\Github\3rd semester final exams backend\Ace-Autos-Frontend\Ace-Autos-App-Angular\src\app\shared\services\cars" />
-      <recent name="C:\Users\Test\Documents\Github\3rd semester final exams backend\Ace-Autos-Frontend\Ace-Autos-App-Angular\src\app\shared\services" />
-      <recent name="C:\Users\Test\Documents\Github\3rd semester final exams backend\Ace-Autos-Frontend\Ace-Autos-App-Angular\src\app\shared" />
-      <recent name="C:\Users\Test\Documents\Github\3rd semester final exams backend\Ace-Autos-Frontend\Ace-Autos-App-Angular\src\assets" />
-    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -60,27 +49,13 @@
       <option name="presentableId" value="Default" />
       <updated>1606389577954</updated>
       <workItem from="1606389579031" duration="25941000" />
-      <workItem from="1606737171739" duration="18695000" />
-      <workItem from="1606902165356" duration="38863000" />
-      <workItem from="1607598656098" duration="4038000" />
+      <workItem from="1606737171739" duration="6818000" />
+      <workItem from="1606812490464" duration="4962000" />
+      <workItem from="1607682477806" duration="2059000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607445144089">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1607445144089" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606557469282">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606557469282" />
-    <state x="425" y="189" key="run.anything.popup" timestamp="1606837843064">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="189" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1606837843064" />
   </component>
 </project>
