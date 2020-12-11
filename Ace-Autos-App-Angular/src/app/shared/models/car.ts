@@ -8,4 +8,5 @@ export class Car {
   model: string;
   price: number;
   type: string;
+  description: string;
 }

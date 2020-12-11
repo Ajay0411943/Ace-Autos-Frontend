@@ -12,11 +12,20 @@ export class CarsComponent implements OnInit {
   cars: Car[];
   constructor(private carService: CarsService) { }
   ngOnInit(): void {
-    this.cars = this.carService.getCars();
+    //this.cars = this.carService.getCars();
+    this.refresh();
   }
 
   delete(id: number) {
     this.carService.deleteCar(id);
-    this.cars = this.carService.getCars();
+    //this.cars = this.carService.getCars();
+    this.refresh();
+  }
+
+  refresh() {
+    this.carService.getCars()
+      .subscribe(listOfCars => {
+        this.cars = listOfCars;
+      });
   }
 }
