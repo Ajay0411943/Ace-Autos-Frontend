@@ -3,6 +3,7 @@ import {AuthenticationService} from '../shared/services/authentication.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../environments/environment';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,8 @@ export class LoginComponent implements OnInit {
   submitted = false;
   loading = false;
 
+  currentUser = this.authenticationService.getToken();
+
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',
@@ -22,9 +25,15 @@ export class LoginComponent implements OnInit {
   };
   constructor(private authenticationService: AuthenticationService,
               private formBuilder: FormBuilder,
-              private http: HttpClient) { }
+              private http: HttpClient,
+              private  router: Router) { }
 
   ngOnInit(): any {
+    console.log(this.currentUser);
+    if (this.currentUser !== null){
+
+      this.router.navigate(['/']);
+    }
     //  Initialize the form group
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],

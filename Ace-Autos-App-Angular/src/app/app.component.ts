@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Car} from "./shared/models/car";
-import {Customer} from "./shared/models/customer";
+import {AuthenticationService} from './shared/services/authentication.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +8,14 @@ import {Customer} from "./shared/models/customer";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private authenticationService: AuthenticationService, private  router: Router) {
+  }
+  currentUser = this.authenticationService.getToken();
   title = 'Ace Autos';
+
+  logout(): any {
+    this.authenticationService.logout();
+    this.router.navigate(['/']);
+    window.location.reload();
+  }
 }
