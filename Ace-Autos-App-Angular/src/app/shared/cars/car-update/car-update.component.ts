@@ -62,7 +62,8 @@ export class CarUpdateComponent implements OnInit {
     const car = this.carForm.value;
     car.id = this.id;
     // this.carService.updateCar(car);
-    this.carService.updateCar(car).subscribe(carUpdated => {this.router.navigateByUrl('/cars');
+    this.carService.updateCar(car).then(() => {
+      this.router.navigateByUrl('/cars');
     });
     // this.carForm.reset();
     // this.router.navigateByUrl("/cars");

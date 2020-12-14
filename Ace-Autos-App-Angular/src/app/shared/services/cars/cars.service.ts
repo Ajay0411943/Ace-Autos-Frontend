@@ -60,8 +60,15 @@ export class CarsService {
       return this.http.post<Car>(this.url, car);
   }
 
-  updateCar(car: Car): Observable<Car> {
-      return this.http.put<Car>(this.url + car.id, car);
+  async updateCar(car: Car): Promise<Car> {
+       await this.http.put<Car>(this.url + '/' + car.id, car).subscribe(
+        data => {
+          console.log(data);
+          return data;
+        },
+        error => console.log('oops', error)
+      );
+       return null;
       // const carToUpdate = this.cars.find(ca => car.id === ca.id);
       // const index = this.cars.indexOf(carToUpdate);
       // this.cars[index] = car;
@@ -74,7 +81,14 @@ export class CarsService {
 
   deleteCar(id: number): Observable<Car> {
       // this.cars = this.cars.filter(ca => ca.id !== id);
-      return this.http.delete<Car>(this.url + '/' + id);
+    this.http.delete<Car>(this.url + '/' + id).subscribe(
+      data => {
+        console.log(data);
+        return data;
+      },
+      error => console.log('oops', error)
+    );
+    return null;
   }
 
 

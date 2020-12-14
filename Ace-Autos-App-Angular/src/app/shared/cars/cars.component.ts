@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Car} from "../models/car";
-import {CarsService} from "../services/cars/cars.service";
+import {Car} from '../models/car';
+import {CarsService} from '../services/cars/cars.service';
 
 @Component({
   selector: 'app-cars',
@@ -12,17 +12,18 @@ export class CarsComponent implements OnInit {
   cars: Car[];
   constructor(private carService: CarsService) { }
   ngOnInit(): void {
-    //this.cars = this.carService.getCars();
+    // this.cars = this.carService.getCars();
     this.refresh();
   }
 
-  delete(id: number) {
+  delete(id: number): any {
+    console.log(id);
     this.carService.deleteCar(id);
-    //this.cars = this.carService.getCars();
-    //this.refresh();
+    // this.cars = this.carService.getCars();
+    // this.refresh();
   }
 
-  refresh() {
+  refresh(): any {
     console.log('Refreshing');
     this.carService.getCars()
       .subscribe(listOfCars => {
