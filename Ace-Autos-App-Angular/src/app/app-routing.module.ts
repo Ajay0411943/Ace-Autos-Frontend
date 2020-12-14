@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-//import {CarsComponent} from './cars/cars.component';
 import {ContactComponent} from './contact/contact.component';
 import {LoginComponent} from './login/login.component';
 import {RouterModule, Routes} from '@angular/router';
@@ -8,11 +7,12 @@ import {HomeComponent} from './home/home.component';
 import {CarDetailsComponent} from './shared/cars/car-details/car-details.component';
 import {CarUpdateComponent} from './shared/cars/car-update/car-update.component';
 import {CarsComponent} from './shared/cars/cars.component';
+import {AuthGuard} from './shared/guards/auth.guard';
 
 const routes: Routes = [
   { path: 'cars/:id', component: CarDetailsComponent },
   { path: 'car-update/:id', component: CarUpdateComponent },
-  { path: 'cars', component: CarsComponent },
+  { path: 'cars', component: CarsComponent},
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },

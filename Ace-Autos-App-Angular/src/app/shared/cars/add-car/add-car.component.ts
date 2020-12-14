@@ -18,19 +18,23 @@ export class AddCarComponent implements OnInit {
       color: new FormControl(''),
       model: new FormControl(''),
       price: new FormControl(''),
-      type: new FormControl('')
+      type: new FormControl(''),
+      description: new FormControl('')
   });
 
   constructor(private carService: CarsService,
               private route: Router) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit() {}
 
-    save(){
+  save() {
     const car = this.carForm.value;
-    this.carService.addCars(car);
+    // this.carService.addCars(car);
+    // this.route.navigateByUrl("/cars");
+    this.carService.addCars(car).subscribe(() => {
+      this.route.navigateByUrl('/cars');
+    })
     this.carForm.reset();
-    this.route.navigateByUrl("/cars");
+
   }
 }

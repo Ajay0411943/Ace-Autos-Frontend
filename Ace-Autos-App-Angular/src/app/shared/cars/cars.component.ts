@@ -19,13 +19,15 @@ export class CarsComponent implements OnInit {
   delete(id: number) {
     this.carService.deleteCar(id);
     //this.cars = this.carService.getCars();
-    this.refresh();
+    //this.refresh();
   }
 
   refresh() {
+    console.log('Refreshing');
     this.carService.getCars()
       .subscribe(listOfCars => {
         this.cars = listOfCars;
-      });
+        console.log(listOfCars);
+      }, error => console.log(error.message));
   }
 }

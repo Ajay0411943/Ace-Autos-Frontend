@@ -1,11 +1,16 @@
 <div class="head" style="text-align: left">
 <h1>List of all the Cars</h1>
-<ul>
+<ul *ngIf="cars">
   <li *ngFor="let car of cars">
-    <a routerLink="/cars/{{car.id}}">{{car.manufacturer}}, {{car.color}}</a>
+    <a routerLink="/cars/{{car.id}}">
+      {{car.manufacturer}},
+      {{car.color}},
+      {{car.price}}
+    </a>
     <button routerLink="/car-update/{{car.id}}">Update</button>
     <button (click)="delete(car.id)">Delete</button>
   </li>
 </ul>
+  <h4 *ngIf="!cars"> Loading...</h4>
 </div>
 <button routerLink="/add-car">Add Car</button>

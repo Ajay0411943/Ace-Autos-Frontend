@@ -4,6 +4,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {Router} from '@angular/router';
+import {CarsService} from "../shared/services/cars/cars.service";
 
 @Component({
   selector: 'app-login',
@@ -14,26 +15,23 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   submitted = false;
   loading = false;
+  errormessage = "";
 
   currentUser = this.authenticationService.getToken();
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type':  'application/json',
-      Authorization: 'my-auth-token'
-    })
-  };
+
   constructor(private authenticationService: AuthenticationService,
               private formBuilder: FormBuilder,
               private http: HttpClient,
-              private  router: Router) { }
+              private  router: Router,
+              private carsService: CarsService) { }
 
   ngOnInit(): any {
     console.log(this.currentUser);
-    if (this.currentUser !== null){
-
-      this.router.navigate(['/']);
-    }
+    // if (this.currentUser !== null){
+    //
+    //   this.router.navigate(['/']);
+    // }
     //  Initialize the form group
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
@@ -47,12 +45,26 @@ export class LoginComponent implements OnInit {
   get username() { return this.loginForm.get('username'); }
   get password() { return this.loginForm.get('password'); }
 
-  onSubmit(): any {
-    this.authenticationService.login(this.username.value, this.password.value);
+  onSubmit() {
+    this.submitted = true;
+
+    if(this.loginForm.invalid){
+      return;
+    }
+    this.loading = true;
+
+    console.log('login');
+    this.authenticationService.login(this.username.value, this.password.value).subscribe(success =>{
+      this.router.navigate(['/']);
+    },
+      error => {
+      this.errormessage = error.message;
+      this.loading = false;
+      });
   }
 
   getList(): any{
-    this.http.get<any>(environment.apiURL + 'car', this.httpOptions).subscribe(data => {
+    this.http.get<any>(environment.apiURL + 'car').subscribe(data => {
       console.table(data);
     });
   }
