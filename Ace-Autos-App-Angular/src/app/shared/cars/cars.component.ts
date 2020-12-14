@@ -21,6 +21,7 @@ export class CarsComponent implements OnInit {
     this.carService.deleteCar(id);
     // this.cars = this.carService.getCars();
     this.refresh();
+    location.reload();
   }
 
   refresh(): any {
