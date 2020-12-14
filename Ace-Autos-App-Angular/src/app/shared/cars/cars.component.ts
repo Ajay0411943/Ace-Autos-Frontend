@@ -20,7 +20,7 @@ export class CarsComponent implements OnInit {
     console.log(id);
     this.carService.deleteCar(id);
     // this.cars = this.carService.getCars();
-    // this.refresh();
+    this.refresh();
   }
 
   refresh(): any {

@@ -14,6 +14,7 @@ export class AppComponent implements OnInit{
   isLoggedIn: boolean;
   title = 'Ace Autos';
 
+
   logout(): any {
     this.authenticationService.logout();
     this.router.navigate(['login']);
