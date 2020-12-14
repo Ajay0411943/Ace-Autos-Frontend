@@ -3,9 +3,9 @@
     <li><a routerLink="/">Home</a></li>
     <li><a routerLink="/cars">Cars</a></li>
     <li><a routerLink="/contact">Contact</a></li>
-    <li *ngIf="!currentUser"><a routerLink="/login">Login</a></li>
-    <li *ngIf="currentUser"><a (click)="logout()">Logout</a></li>
-    <li *ngIf="currentUser"><a routerLink="/login">Admin</a></li>
+    <li *ngIf="!isLoggedIn"><a routerLink="/login">Login</a></li>
+    <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li>
+    <li *ngIf="isLoggedIn"><a routerLink="/login">Admin</a></li>
   </ul>
 </nav>
 <header>
