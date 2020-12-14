@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     });
 
     // reset login status
-    this.authenticationService.logout();
+    //this.authenticationService.logout();
   }
 
   get username() { return this.loginForm.get('username'); }
@@ -63,9 +63,9 @@ export class LoginComponent implements OnInit {
       });
   }
 
-  getList(): any{
-    this.http.get<any>(environment.apiURL + 'car').subscribe(data => {
-      console.table(data);
-    });
-  }
+  // getList(): any{
+  //   this.http.get<any>(environment.apiURL + 'car').subscribe(data => {
+  //     console.table(data);
+  //   });
+  // }
 }
