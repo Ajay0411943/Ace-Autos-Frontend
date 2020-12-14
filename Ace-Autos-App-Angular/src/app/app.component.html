@@ -6,6 +6,8 @@
     <li *ngIf="!currentUser"><a routerLink="/login">Login</a></li>
     <li *ngIf="currentUser"><a (click)="logout()">Logout</a></li>
     <li *ngIf="currentUser"><a routerLink="/login">Admin</a></li>
+    <li *ngIf="currentUser"><a routerLink="/table">Car Table</a></li>
+
   </ul>
 </nav>
 <header>

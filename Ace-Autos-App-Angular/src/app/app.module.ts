@@ -9,11 +9,16 @@ import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {JwtInterceptor} from './shared/guards/interceptor';
 import {CarUpdateComponent} from './shared/cars/car-update/car-update.component';
 import {CarDetailsComponent} from './shared/cars/car-details/car-details.component';
 import {AddCarComponent} from './shared/cars/add-car/add-car.component';
+import { TableComponent } from './table/table.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import {MatTableModule} from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
@@ -24,13 +29,18 @@ import {AddCarComponent} from './shared/cars/add-car/add-car.component';
     ContactComponent,
     CarDetailsComponent,
     AddCarComponent,
-    CarUpdateComponent
+    CarUpdateComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    Ng2SearchPipeModule,
+    FormsModule,
+    MatTableModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
   bootstrap: [AppComponent]

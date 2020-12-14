@@ -1,0 +1,38 @@
+<div class="container text-center">
+  <h1>{{title}}</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="search-car">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#f002;  Start searching for a car">
+    </div>
+    <table class="mat-table mat-table">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Manufacturer</th>
+        <th>Model</th>
+        <th>Type</th>
+        <th>Year</th>
+        <th>Fuel</th>
+        <th>Mileage</th>
+        <th>Color</th>
+        <th>Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let car of cars | filter:searchText">
+        <td>{{car.id}}</td>
+        <td>{{car.manufacturer}}</td>
+        <td>{{car.model}}</td>
+        <td>{{car.type}}</td>
+        <td>{{car.year}}</td>
+        <td>{{car.fuel}}</td>
+        <td>{{car.mileage}}</td>
+        <td>{{car.color}}</td>
+        <td>{{car.price}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
