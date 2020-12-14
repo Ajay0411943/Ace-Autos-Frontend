@@ -8,6 +8,7 @@ import {CarDetailsComponent} from './shared/cars/car-details/car-details.compone
 import {CarUpdateComponent} from './shared/cars/car-update/car-update.component';
 import {CarsComponent} from './shared/cars/cars.component';
 import {AuthGuard} from './shared/guards/auth.guard';
+import {AddCarComponent} from "./shared/cars/add-car/add-car.component";
 
 const routes: Routes = [
   { path: 'cars/:id', component: CarDetailsComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'add-car', component: AddCarComponent},
   { path: '', redirectTo: 'cars', pathMatch: 'full' }
 ];
 
