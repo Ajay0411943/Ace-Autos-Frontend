@@ -21,6 +21,7 @@ export class CarsService {
   cars: Car[];
   id = 1;
   constructor(private http: HttpClient, private authenService: AuthenticationService) {
+  //  This is a list of cars that we used for the first stages of programming, a list that wasn't used in the backend.
   //   this.cars = [{id: this.id++, color: 'Red', fuel: 'Diesel', manufacturer: 'Ferrari', mileage: 25,
   //   model: 'F8 Spider', price: 3000000, type: 'sport', year: 1994},
   //   {id: this.id++, color: 'Yellow', fuel: 'Diesel', manufacturer: 'Lamborghini', mileage: 25,
