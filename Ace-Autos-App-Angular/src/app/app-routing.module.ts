@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {Component, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ContactComponent} from './contact/contact.component';
 import {LoginComponent} from './login/login.component';
@@ -10,6 +10,9 @@ import {CarsComponent} from './shared/cars/cars.component';
 import {AuthGuard} from './shared/guards/auth.guard';
 import {TableComponent} from './table/table.component';
 import {AddCarComponent} from './shared/cars/add-car/add-car.component';
+import {AboutComponent} from './about/about.component';
+import {GalleryComponent} from './gallery/gallery.component';
+import {TeamComponent} from './team/team.component';
 
 const routes: Routes = [
   { path: 'cars/:id', component: CarDetailsComponent },
@@ -21,6 +24,9 @@ const routes: Routes = [
   { path: 'table', component: TableComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'add-car', component: AddCarComponent},
+  { path: 'about', component: AboutComponent },
+  { path: 'gallery', component: GalleryComponent },
+  { path: 'team', component: TeamComponent },
   { path: '', redirectTo: 'cars', pathMatch: 'full' }
 ];
 
