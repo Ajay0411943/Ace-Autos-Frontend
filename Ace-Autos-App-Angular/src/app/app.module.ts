@@ -18,6 +18,8 @@ import { TableComponent } from './table/table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {MatTableModule} from '@angular/material/table';
+import {ButtonsModule} from 'ngx-bootstrap/buttons';
+import {ProgressbarModule} from 'ngx-bootstrap/progressbar';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import {MatTableModule} from '@angular/material/table';
     BrowserAnimationsModule,
     Ng2SearchPipeModule,
     FormsModule,
-    MatTableModule
+    MatTableModule,
+    ButtonsModule,
+    ProgressbarModule.forRoot()
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
   bootstrap: [AppComponent]
