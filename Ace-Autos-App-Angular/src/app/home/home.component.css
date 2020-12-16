@@ -67,7 +67,7 @@ article {
 }
 
 .head{
-  text-align: left;
+  text-align: center;
   font-size: 30px;
   font-family: 'Fugaz One', cursive;
 }
@@ -79,7 +79,10 @@ section:after {
   clear: both;
 }
 p{
-  text-align: left;
+  text-align: center;
+  font-family: 'Times New Roman', cursive;
+  font-size: 25px;
+  margin: 25px;
 }
 
 /* Style the footer */

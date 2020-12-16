@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {Component, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ContactComponent} from './contact/contact.component';
 import {LoginComponent} from './login/login.component';
@@ -11,11 +11,14 @@ import {AuthGuard} from './shared/guards/auth.guard';
 import {TableComponent} from './table/table.component';
 import {AddCarComponent} from './shared/cars/add-car/add-car.component';
 import {UserComponent} from './user/user.component';
+import {AboutComponent} from './about/about.component';
+import {GalleryComponent} from './gallery/gallery.component';
+import {TeamComponent} from './team/team.component';
 
 const routes: Routes = [
-  { path: 'cars/:id', component: CarDetailsComponent },
-  { path: 'car-update/:id', component: CarUpdateComponent },
-  { path: 'cars', component: CarsComponent},
+  { path: 'cars/:id', component: CarDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'car-update/:id', component: CarUpdateComponent, canActivate: [AuthGuard] },
+  { path: 'cars', component: CarsComponent, canActivate: [AuthGuard]},
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
@@ -23,7 +26,14 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'add-car', component: AddCarComponent},
   { path: '', redirectTo: 'cars', pathMatch: 'full' },
-  { path: 'user', component: UserComponent}
+  { path: 'user', component: UserComponent},
+  { path: 'table', component: TableComponent, canActivate: [AuthGuard] },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'add-car', component: AddCarComponent, canActivate: [AuthGuard]},
+  { path: 'about', component: AboutComponent },
+  { path: 'gallery', component: GalleryComponent },
+  { path: 'team', component: TeamComponent }
+  // { path: '', redirectTo: 'cars', pathMatch: 'full' }
 ];
 
 

@@ -32,6 +32,7 @@ export class AuthenticationService {
   }
 
   login(username: string, password: string): Observable<boolean> {
+
     /*
      const user = {username, password};
      this.http.post<any>('https://localhost:44360/api/token', user).subscribe(
@@ -54,6 +55,52 @@ export class AuthenticationService {
        error => console.log('oops', error)
      );
      return;*/
+
+    // console.log('lets go');
+    // const user = {username, password};
+    // const url = 'https://localhost:44360/api/token';
+    // const result = this.http.post<any>(url, {username, password}).pipe(map(response => {
+    //   console.log("Flag");
+    //   const token = response.token;
+    //   console.log("token");
+    //   // login successful if there's a jwt token in the response
+    //   if (token) {
+    //     // store username and jwt token in local storage to keep user logged in between page refreshes
+    //     localStorage.setItem('currentUser', JSON.stringify({ username: username, token: token}));
+    //     // window.location.reload();
+    //     // return true to indicate successful login
+    //     return true;
+    //   } else {
+    //     // return false to indicate failed login
+    //     return false;
+    //   }
+    // }));
+    // console.log("Game");
+    // return result;
+
+
+     // console.log('lets go');
+     // const user = {username, password};
+     // this.http.post<any>('https://localhost:44360/api/token', user).subscribe(
+     //   data => {
+     //     const token = data.token;
+     //     console.log(token);
+     //     // login successful if there's a jwt token in the response
+     //     if (token) {
+     //       // store username and jwt token in local storage to keep user logged in between page refreshes
+     //      localStorage.setItem('currentUser', JSON.stringify({ username, token}));
+     //      window.location.reload();
+     //       // return true to indicate successful login
+     //      return true;
+     //    } else {
+     //      // return false to indicate failed login
+     //       return false;
+     //     }
+     //   },
+     //   error => console.log('oops', error)
+     // );
+     // return;
+
 
      return this.http.post<any>(environment.apiURL + 'token', {username, password})
       .pipe(map(response => {

@@ -21,6 +21,10 @@ import {MatTableModule} from '@angular/material/table';
 import {ButtonsModule} from 'ngx-bootstrap/buttons';
 import {ProgressbarModule} from 'ngx-bootstrap/progressbar';
 import { UserComponent } from './user/user.component';
+import { AboutComponent } from './about/about.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { TeamComponent } from './team/team.component';
+
 
 
 @NgModule({
@@ -34,7 +38,10 @@ import { UserComponent } from './user/user.component';
     AddCarComponent,
     CarUpdateComponent,
     TableComponent,
-    UserComponent
+    UserComponent,
+    AboutComponent,
+    GalleryComponent,
+    TeamComponent,
   ],
   imports: [
     BrowserModule,
