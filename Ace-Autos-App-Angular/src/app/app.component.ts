@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
   currentUser = this.authenticationService.getToken();
   isLoggedIn: boolean;
   title = 'Ace Autos';
-
+  isAdmin: boolean;
 
   logout(): any {
     this.authenticationService.logout();
@@ -23,5 +23,6 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.authenticationService.isLoggedIn().subscribe(loggedIn => this.isLoggedIn = loggedIn);
+    this.authenticationService.isLogAdmin().subscribe(loggedIn => this.isAdmin = loggedIn);
   }
 }

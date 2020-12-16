@@ -20,6 +20,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {MatTableModule} from '@angular/material/table';
 import {ButtonsModule} from 'ngx-bootstrap/buttons';
 import {ProgressbarModule} from 'ngx-bootstrap/progressbar';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import {ProgressbarModule} from 'ngx-bootstrap/progressbar';
     CarDetailsComponent,
     AddCarComponent,
     CarUpdateComponent,
-    TableComponent
+    TableComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

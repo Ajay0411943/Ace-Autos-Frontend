@@ -1,8 +1,7 @@
 export class User {
   id: number;
+  username: string;
   firstName: string;
   lastName: string;
-  isAdmin: boolean;
-
-  username: string;
+  isAdmin?: boolean;
 }

@@ -10,6 +10,7 @@ import {CarsComponent} from './shared/cars/cars.component';
 import {AuthGuard} from './shared/guards/auth.guard';
 import {TableComponent} from './table/table.component';
 import {AddCarComponent} from './shared/cars/add-car/add-car.component';
+import {UserComponent} from './user/user.component';
 
 const routes: Routes = [
   { path: 'cars/:id', component: CarDetailsComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'table', component: TableComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'add-car', component: AddCarComponent},
-  { path: '', redirectTo: 'cars', pathMatch: 'full' }
+  { path: '', redirectTo: 'cars', pathMatch: 'full' },
+  { path: 'user', component: UserComponent}
 ];
 
 
