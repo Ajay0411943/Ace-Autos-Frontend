@@ -22,18 +22,17 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'table', component: TableComponent },
+  { path: 'table', component: TableComponent, canActivate:[AuthGuard] },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'add-car', component: AddCarComponent},
+  { path: 'add-car', component: AddCarComponent, canActivate:[AuthGuard] },
   { path: '', redirectTo: 'cars', pathMatch: 'full' },
-  { path: 'user', component: UserComponent},
+  { path: 'user', component: UserComponent, canActivate:[AuthGuard] },
   { path: 'table', component: TableComponent, canActivate: [AuthGuard] },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'add-car', component: AddCarComponent, canActivate: [AuthGuard]},
   { path: 'about', component: AboutComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'team', component: TeamComponent }
-  // { path: '', redirectTo: 'cars', pathMatch: 'full' }
 ];
 
 
