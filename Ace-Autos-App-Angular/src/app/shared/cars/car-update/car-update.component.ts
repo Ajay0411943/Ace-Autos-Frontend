@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
-import {CarsService} from "../../services/cars/cars.service";
-import {FormControl, FormGroup} from "@angular/forms";
-import {valueReferenceToExpression} from "@angular/compiler-cli/src/ngtsc/annotations/src/util";
+import {ActivatedRoute, Router} from '@angular/router';
+import {CarsService} from '../../services/cars/cars.service';
+import {FormControl, FormGroup} from '@angular/forms';
+import {valueReferenceToExpression} from '@angular/compiler-cli/src/ngtsc/annotations/src/util';
 
 @Component({
   selector: 'app-car-update',

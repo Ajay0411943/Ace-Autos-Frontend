@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthenticationService} from "../shared/services/authentication.service";
-import {UserService} from "../shared/services/users/user.service";
+import {AuthenticationService} from '../shared/services/authentication.service';
+import {UserService} from '../shared/services/users/user.service';
+import {Car} from '../shared/models/car';
+import {User} from '../shared/models/user';
 
 @Component({
   selector: 'app-user',
@@ -8,10 +10,12 @@ import {UserService} from "../shared/services/users/user.service";
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  user: User[];
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.refresh();
   }
 
   deleteUser(id: number): any {
@@ -19,7 +23,7 @@ export class UserComponent implements OnInit {
 
   }
 
-  editUser(): any {
+  editUser(id: number): any {
     this.userService.editUser({id: 1, username: 'Lalala', firstName: 'None', lastName: 'Dont'});
   }
 
@@ -27,5 +31,14 @@ export class UserComponent implements OnInit {
     this.userService.getALL().subscribe(data => {
       console.log(data);
     });
+  }
+
+  refresh(): any {
+    console.log('Refreshing');
+    this.userService.getALL()
+      .subscribe(listOfUsers => {
+        this.user = listOfUsers;
+        console.log(listOfUsers);
+      }, error => console.log(error.message));
   }
 }
