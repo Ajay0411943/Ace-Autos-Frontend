@@ -1,4 +1,27 @@
-<p>user works!</p>
-<button (click)="getALL()">Get all List</button>
-<button (click)="editUser()">Edit</button>
-<button (click)="deleteUser(1)">Delete user 1</button>
+<div class = "container">
+  <h1>List of all the Users</h1>
+  <div class ="row" *ngIf="!user">
+    <progressbar class = "mt-5 col-4 offset-4 pr-0 pl-0" max="100" [value] ="100" type ="success" [striped] = "true" [animate] = "true"> Loading...</progressbar>
+  </div>
+  <div class="row mt-1" *ngIf="user">
+    <div class = "col-6 pl-1 pr-1 mt-1" *ngFor="let user of user">
+      <div class = "card">
+        <div class = "card-body">
+          <a routerLink="/user/{{user.id}}">
+            {{user.username}}
+          </a>
+          <div> First Name:
+            {{user.firstName}} </div>
+          <div>Last Name: {{user.lastName}}</div>
+        </div>
+        <div class = "card-body test-right">
+          <button (click)="deleteUser(user.id)" class = "brn btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
