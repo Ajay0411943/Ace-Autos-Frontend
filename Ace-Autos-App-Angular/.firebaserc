@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "aceautos-dc780": {
+      "hosting": {
+        "Ace-Autos-App-Angular": [
+          "aceautos-dc780"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "aceautos-dc780"
+  }
+}

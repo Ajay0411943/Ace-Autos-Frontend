@@ -3,8 +3,20 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  // Azure
   production: false,
-  apiURL: 'https://localhost:44360/api/'
+  apiURL: 'https://localhost:44360/api/',
+
+  // Firebase
+  firebase: {
+   apiKey: 'AIzaSyBKEeLuC16Kg9U-_uWklq69kgalVVgAcI4',
+   authDomain: 'aceautos-dc780.firebaseapp.com',
+   projectId: 'aceautos-dc780',
+   storageBucket: 'aceautos-dc780.appspot.com',
+   messagingSenderId: '941716639486',
+   appId: '1:941716639486:web:046822b5849cdeab371faf',
+   measurementId: 'G-5BJVH2D25D'
+   }
 };
 
 /*

@@ -122,6 +122,10 @@
               "devServerTarget": "Ace-Autos-App-Angular:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

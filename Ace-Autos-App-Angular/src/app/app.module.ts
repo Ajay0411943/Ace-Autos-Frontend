@@ -24,6 +24,9 @@ import { UserComponent } from './user/user.component';
 import { AboutComponent } from './about/about.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { TeamComponent } from './team/team.component';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 
 
@@ -53,7 +56,9 @@ import { TeamComponent } from './team/team.component';
     FormsModule,
     MatTableModule,
     ButtonsModule,
-    ProgressbarModule.forRoot()
+    ProgressbarModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
   bootstrap: [AppComponent]
