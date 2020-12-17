@@ -5,7 +5,7 @@ import {map} from 'rxjs/operators';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {AuthenticationService} from '../authentication.service';
 import {User} from '../../models/user';
-import {Observable} from 'rxjs';
+import {Observable} from "rxjs";
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -21,7 +21,7 @@ export class UserService {
    url1 = 'https://localhost:44360/api/token';
   constructor(private http: HttpClient, private authenService: AuthenticationService) { }
 
-  delete(id: number): Observable<User> {
+  delete(id: number): any {
     httpOptions.headers =
       httpOptions.headers.set('Authorization', 'Bearer ' + this.authenService.getToken());
     this.http.delete<User>(this.url1 + '/' + id).subscribe(
@@ -34,7 +34,7 @@ export class UserService {
     return null;
   }
 
-  editUser(user: { firstName: string; lastName: string; id: number; username: string }): Observable<User> {
+  editUser(user: User): any {
     httpOptions.headers =
       httpOptions.headers.set('Authorization', 'Bearer ' + this.authenService.getToken());
     this.http.put<User>(this.url1 + '/' + user.id, user).subscribe(
