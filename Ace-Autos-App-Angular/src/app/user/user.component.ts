@@ -20,7 +20,7 @@ export class UserComponent implements OnInit {
 
   deleteUser(id: number): any {
     this.userService.delete(id);
-
+    location.reload();
   }
 
   editUser(id: number): any {
