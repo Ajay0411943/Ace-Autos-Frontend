@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8e4488ed-fd1e-4d4e-beeb-a7cd61a4a4bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/cars/car-update/car-update.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/cars/car-update/car-update.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/services/users/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/shared/services/users/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/user/user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/user/user.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/user/user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/src/app/user/user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/.firebaserc" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/.firebaserc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/firebase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ace-Autos-App-Angular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Ace-Autos-App-Angular/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +46,7 @@
       <workItem from="1608109074989" duration="14962000" />
       <workItem from="1608197819470" duration="605000" />
       <workItem from="1608198543710" duration="161000" />
+      <workItem from="1608279402347" duration="1871000" />
     </task>
     <servers />
   </component>

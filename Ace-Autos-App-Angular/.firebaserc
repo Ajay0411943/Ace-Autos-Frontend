@@ -6,6 +6,13 @@
           "aceautos-dc780"
         ]
       }
+    },
+    "ace-autos": {
+      "hosting": {
+        "Ace-Autos-App-Angular": [
+          "ace-autos"
+        ]
+      }
     }
   },
   "projects": {
