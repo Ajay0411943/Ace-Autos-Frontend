@@ -4,7 +4,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {Router} from '@angular/router';
-import {CarsService} from "../shared/services/cars/cars.service";
+import {CarsService} from '../shared/services/cars/cars.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   submitted = false;
   loading = false;
-  errormessage = "";
+  errormessage = '';
 
   currentUser = this.authenticationService.getToken();
 
@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     });
 
     // reset login status
-    //this.authenticationService.logout();
+    // this.authenticationService.logout();
   }
 
   get username() { return this.loginForm.get('username'); }
@@ -48,13 +48,13 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
 
-    if(this.loginForm.invalid){
+    if (this.loginForm.invalid){
       return;
     }
     this.loading = true;
 
     console.log('login');
-    this.authenticationService.login(this.username.value, this.password.value).subscribe(success =>{
+    this.authenticationService.login(this.username.value, this.password.value).subscribe(success => {
       this.router.navigate(['/']);
     },
       error => {

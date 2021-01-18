@@ -22,8 +22,8 @@
 <!--</div>-->
 
 <div class = "container">
-  <h1>List of all the Cars</h1>
-  <div class ="row" *ngIf="!cars">
+  <h1>List of all the Cars</h1><!-- This is the headline-->
+  <div class ="row" *ngIf="!cars"><!-- Angular if statement: if there are no cars its gonna show this progress bar-->
     <progressbar class = "mt-5 col-4 offset-4 pr-0 pl-0" max="100" [value] ="100" type ="success" [striped] = "true" [animate] = "true"> Loading...</progressbar>
   </div>
   <div class="row mt-1" *ngIf="cars">
@@ -31,7 +31,7 @@
       <div class = "card">
         <div class = "card-body">
           <a routerLink="/cars/{{car.id}}">
-            {{car.manufacturer}}
+            {{car.manufacturer}}nn
              </a>
           <div> Description:
             {{car.description}} </div>
