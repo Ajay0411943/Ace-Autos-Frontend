@@ -13,31 +13,36 @@ const httpOptions = {
   })
 };
 
+/**  Components aren't allowed to fetch or save data directly. They should focus on presenting data
+ * and delegate data access to a service.
+ * Services are a great way to share information among components that don't know each other.
+ * */
+
 @Injectable({
   providedIn: 'root'
 })
 export class CarsService {
+  /** The carService gets car data with HTTP requests */
+  /** The carService is refactored to load cars from a web API*/
   url = environment.apiURL + 'car';
-  cars: Car[];
+  cars: Car[]; /** An cars array, used to store multiple values.*/
   id = 1;
   constructor(private http: HttpClient, private authenService: AuthenticationService) {
-  //  This is a list of cars that we used for the first stages of programming, a list that wasn't used in the backend.
-  //   this.cars = [{id: this.id++, color: 'Red', fuel: 'Diesel', manufacturer: 'Ferrari', mileage: 25,
-  //   model: 'F8 Spider', price: 3000000, type: 'sport', year: 1994},
-  //   {id: this.id++, color: 'Yellow', fuel: 'Diesel', manufacturer: 'Lamborghini', mileage: 25,
-  //     model: 'Urus', price: 2500000, type: 'sport', year: 2019}
-  // ];
   }
+  /** The car service gets information from the backend, retrieving the necessary information needed.
+   * GET cars from the server.
+   */
   getCars(): Observable<Car[]> {
-      // return this.cars;
       httpOptions.headers =
       httpOptions.headers.set('Authorization', 'Bearer ' + this.authenService.getToken());
-      // return this.http.get<Car[]>(this.url);
-      console.log('Fish');
       const url1 = 'https://localhost:44360/api/' + 'car';
+    /**  Pipe: An function that accepts an Observable, transforming input values to output values for display in a view.
+     *  Map: A function used to access the values, presenting them as an observable. Map is used to transform values of an observable.
+     *  Using pipe and map together, allows us to chain multiple operators together.
+     *  HTTPClient is utilized as it can return HTTP method calls.
+     */
       return this.http.get<Car[]>(url1, httpOptions).pipe(
       map((rest: any[]) => {
-        console.log('Google');
         const data = rest.map(obj => ({
           id: obj.id,
           manufacturer: obj.manufacturer,
@@ -79,9 +84,10 @@ export class CarsService {
       // return this.cars.find(ca => ca.id === id);
       return this.http.get<Car>(this.url + '/' + id);
   }
-
+  /** The car service gets information from the backend, retrieving the necessary information needed.
+   * DELETEcar calls HTTPClient.delete
+   */
   deleteCar(id: number): Observable<Car> {
-      // this.cars = this.cars.filter(ca => ca.id !== id);
     this.http.delete<Car>(this.url + '/' + id).subscribe(
       data => {
         console.log(data);

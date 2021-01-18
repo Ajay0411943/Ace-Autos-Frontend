@@ -14,6 +14,7 @@ export class AppComponent implements OnInit{
   isLoggedIn: boolean;
   title = 'Ace Autos';
   isAdmin: boolean;
+  /** Boolean values are used to store true or false values.*/
 
   logout(): any {
     this.authenticationService.logout();
